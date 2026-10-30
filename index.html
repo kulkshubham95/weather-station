@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Station</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <div class="brand">
+        <div class="brand-icon">☀</div>
+        <div>
+          <h1>Weather Station</h1>
+          <p>Your daily weather companion</p>
+        </div>
+      </div>
+      <div class="date" id="todayDate">Loading date...</div>
+    </header>
+
+    <section class="search-section">
+      <h2>Check the weather</h2>
+      <p class="subtitle">Enter a city name to see the latest weather information.</p>
+      <form id="searchForm" class="search-form">
+        <input id="cityInput" type="text" placeholder="Enter city name (e.g. Pune)" aria-label="City name" required>
+        <button id="searchButton" type="submit">Search</button>
+      </form>
+      <p id="message" class="message" role="status"></p>
+    </section>
+
+    <section id="weatherPanel" class="weather-panel" hidden>
+      <div class="location-row">
+        <div>
+          <p class="eyebrow">CURRENT WEATHER</p>
+          <h2 id="cityName">City</h2>
+          <p id="weatherDescription" class="condition">Weather condition</p>
+        </div>
+        <div id="weatherIcon" class="weather-icon" aria-hidden="true">☀️</div>
+      </div>
+
+      <div class="temperature-row">
+        <div class="temperature"><span id="temperature">--</span><span class="degree">°C</span></div>
+        <p class="feels-like">Feels like <strong id="feelsLike">--°C</strong></p>
+      </div>
+
+      <div class="details-grid">
+        <article class="detail-card">
+          <div class="detail-icon">💧</div>
+          <div><p>Humidity</p><strong id="humidity">--%</strong></div>
+        </article>
+        <article class="detail-card">
+          <div class="detail-icon">🌬️</div>
+          <div><p>Wind speed</p><strong id="windSpeed">-- km/h</strong></div>
+        </article>
+        <article class="detail-card">
+          <div class="detail-icon">🌡️</div>
+          <div><p>Apparent temperature</p><strong id="apparentTemp">--°C</strong></div>
+        </article>
+        <article class="detail-card">
+          <div class="detail-icon">🕒</div>
+          <div><p>Local time</p><strong id="localTime">--:--</strong></div>
+        </article>
+      </div>
+    </section>
+
+    <footer>
+      <p>Weather Station · Built with HTML, CSS and JavaScript</p>
+      <p>Weather data provided by <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a></p>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

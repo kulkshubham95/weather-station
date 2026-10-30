@@ -1,0 +1,247 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #17233b;
+  background: #f3f6fb;
+}
+
+body {
+  min-height: 100vh;
+  padding: 32px 16px;
+  background: linear-gradient(135deg, #edf4ff 0%, #f7f9fc 55%, #eaf2ff 100%);
+}
+
+.app {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 34px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 15px;
+  background: #e0ecff;
+  color: #2364c5;
+  font-size: 27px;
+}
+
+h1 {
+  font-size: 22px;
+  letter-spacing: -0.5px;
+}
+
+.brand p, .date, .subtitle {
+  color: #71809a;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.date {
+  margin-top: 0;
+  text-align: right;
+}
+
+.search-section, .weather-panel {
+  background: #ffffff;
+  border: 1px solid #e7edf6;
+  border-radius: 22px;
+  padding: 30px;
+  box-shadow: 0 12px 35px rgba(33, 66, 112, 0.07);
+}
+
+.search-section h2 {
+  font-size: 25px;
+  margin-bottom: 8px;
+}
+
+.search-form {
+  display: flex;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.search-form input {
+  flex: 1;
+  min-width: 0;
+  padding: 15px 16px;
+  border: 1px solid #dce4f0;
+  border-radius: 12px;
+  outline: none;
+  font-size: 15px;
+  color: #17233b;
+}
+
+.search-form input:focus {
+  border-color: #3678dc;
+  box-shadow: 0 0 0 3px rgba(54, 120, 220, 0.12);
+}
+
+.search-form button {
+  border: 0;
+  border-radius: 12px;
+  padding: 0 25px;
+  background: #2868c7;
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.search-form button:hover {
+  background: #1e55a7;
+}
+
+.search-form button:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+.message {
+  min-height: 18px;
+  margin-top: 12px;
+  color: #c04444;
+  font-size: 13px;
+}
+
+.weather-panel {
+  margin-top: 22px;
+}
+
+.location-row, .temperature-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.eyebrow {
+  color: #7a8aa4;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 9px;
+}
+
+.location-row h2 {
+  font-size: 28px;
+}
+
+.condition {
+  color: #71809a;
+  margin-top: 6px;
+}
+
+.weather-icon {
+  font-size: 58px;
+}
+
+.temperature-row {
+  justify-content: flex-start;
+  gap: 22px;
+  margin: 26px 0;
+}
+
+.temperature {
+  font-size: 62px;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: -3px;
+  color: #1e5fb9;
+}
+
+.degree {
+  font-size: 32px;
+  vertical-align: top;
+  letter-spacing: 0;
+}
+
+.feels-like {
+  color: #71809a;
+  font-size: 14px;
+}
+
+.feels-like strong {
+  color: #263753;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.detail-card {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 17px;
+  border-radius: 14px;
+  background: #f5f8fd;
+}
+
+.detail-icon {
+  font-size: 24px;
+}
+
+.detail-card p {
+  color: #71809a;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.detail-card strong {
+  font-size: 17px;
+}
+
+footer {
+  padding: 25px 10px 0;
+  text-align: center;
+  color: #8592a8;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+footer a {
+  color: #2868c7;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 560px) {
+  body { padding: 20px 12px; }
+  .header { align-items: flex-start; flex-direction: column; margin-bottom: 22px; }
+  .date { text-align: left; }
+  .search-section, .weather-panel { padding: 22px 18px; border-radius: 18px; }
+  .search-section h2 { font-size: 22px; }
+  .search-form { flex-direction: column; }
+  .search-form button { min-height: 48px; }
+  .location-row h2 { font-size: 24px; }
+  .weather-icon { font-size: 46px; }
+  .temperature { font-size: 54px; }
+  .details-grid { grid-template-columns: 1fr; }
+}
